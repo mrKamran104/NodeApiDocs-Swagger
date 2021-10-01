@@ -4,6 +4,13 @@ const router = express.Router();
 
 const idLength = 8;
 
+/**
+ * @api {get} /todos Request All Todos information
+ * @apiName GetTodos
+ * @apiGroup Todos
+ * @apiSampleRequest off
+ */
+
 router.get('/', (req,res) => {
 
     let todos = req.app.db.get('todos').value();

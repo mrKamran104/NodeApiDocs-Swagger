@@ -14,6 +14,9 @@ db.defaults({ todos:[] }).write();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+// Serving static files from "public" folder
+app.use(express.static('public'));
+
 // app configs.
 app.db = db;
 app.use(express.json());
